@@ -1,0 +1,36 @@
+name: CI Pipeline
+
+# This defines when the action will run (on push or pull request to the main branch)
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      # Check out the repository
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Set up Python environment
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.10
+
+      # Install Poetry
+      - name: Install Poetry
+        run: pip install poetry
+
+      # Install dependencies for ai_news_bot
+      - name: Install dependencies
+        run: cd ai_news_bot && poetry install --no-interaction --no-root && cd ..
+
+      # Run tests
+      - name: Run tests
+        run: poetry run pytest ai_news_bot/tests/ --maxfail=1 --disable-warnings
