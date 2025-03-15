@@ -33,4 +33,4 @@ jobs:
 
       # Run tests
       - name: Run tests
-        run: poetry run pytest ai_news_bot/tests/ --maxfail=1 --disable-warnings
+        run: cd ai_news_bot && poetry run pytest tests/ --maxfail=1 --disable-warnings
