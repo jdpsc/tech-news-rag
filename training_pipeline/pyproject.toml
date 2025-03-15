@@ -1,0 +1,51 @@
+[tool.poetry]
+name = "training_pipeline"
+version = "0.1.0"
+description = ""
+authors = ["João Correia <joaodpscorreia@gmail.com>"]
+readme = "README.md"
+packages = [{include = "training_pipeline"}]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.11"
+bitsandbytes = "^0.44.0"
+transformers = "^4.49.0"
+peft = "^0.14.0"
+datasets = "^2.14.2"
+trl = "^0.15.1"
+comet-ml = "3.43.2"
+python-dotenv = "^1.0.0"
+scipy = "^1.11.1"
+numpy = ">=1.24.1,<2.0"
+einops = "^0.6.1"
+psutil = "^5.9.5"
+torch = "2.3.0"
+fire = "^0.5.0"
+unstructured = "^0.10.28"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.7.0"
+ruff = "^0.0.285"
+
+[[tool.poetry.source]]
+name = "PyPI"
+priority = "primary"
+
+[[tool.poetry.source]]
+name = "torch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+priority = "supplemental"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.isort]
+case-sensitive = true
