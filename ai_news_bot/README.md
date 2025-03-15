@@ -3,7 +3,7 @@
 Chatbot application orchestrated with [Langchain](https://www.langchain.com) that:
 - Cleans and embeds the user question
 - Queries [Qdrant](https://qdrant.tech) for the top K (default 1) closest matches
-- Uses the registed model from [Comet-ML](https://www.comet.com) to generate a response
+- Uses the registered model from [Comet-ML](https://www.comet.com) to generate a response
 - Can be easily deployed as an endpoint
 
 # Usage

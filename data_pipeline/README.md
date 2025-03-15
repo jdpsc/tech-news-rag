@@ -1,9 +1,9 @@
 # Data Pipeline
 
 Data pipeline that:
-- ingests AI topics from multiple sources (right now, only papers from [Arxiv](https://arxiv.org)) on a schedule using [Dagster](https://dagster.io)
-- cleans & transforms the documents into embeddings using [Hugging Face](https://huggingface.co) sentence transformers
-- stores the embeddings into the [Qdrant Vector DB](https://qdrant.tech)
+- Ingests AI topics from multiple sources (right now, only papers from [Arxiv](https://arxiv.org)) on a schedule using [Dagster](https://dagster.io)
+- Cleans and transforms the documents into embeddings using [Hugging Face](https://huggingface.co) sentence transformers
+- Stores the embeddings in the [Qdrant Vector DB](https://qdrant.tech)
 
 
 # Usage

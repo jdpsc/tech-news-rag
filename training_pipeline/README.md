@@ -3,7 +3,7 @@
 
 Finetuning pipeline that:
 - Loads a pre-trained LLM (in this case Falcon-7B-Instruct)
-- Efficently finetunes it using [Hugging Face](https://huggingface.co) libraries
+- Efficiently fine-tunes it using [Hugging Face](https://huggingface.co) libraries
 - Logs the model experiments on [Comet-ML](https://www.comet.com), so that the best model can be registered and accessed later
 - Easily allows for training in the cloud (in case GPU access is needed)
 
@@ -32,7 +32,7 @@ You also need to create a [Beam](https://www.beam.cloud) account and run the fol
 beam config create
 ```
 
-## Runing the training pipeline
+## Running the training pipeline
 
 Training locally (assuming you have a powerful enough GPU):
 ```shell
@@ -54,4 +54,4 @@ Infer on Beam:
 make infer_beam
 ```
 
-After the training, you need to register the model in Comet. You can follow the following [guide](https://www.comet.com/docs/v2/guides/model-registry/using-model-registry/#register-a-model).
+After the training, you need to register the model in Comet. You can follow this [guide](https://www.comet.com/docs/v2/guides/model-registry/using-model-registry/#register-a-model).
