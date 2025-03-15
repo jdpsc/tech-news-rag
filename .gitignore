@@ -89,3 +89,15 @@ target/
 .mypy_cache/
 .pytest_cache/
 .ruff_cache/
+
+# dataset folder
+dataset/
+
+# logs folders
+logs/
+
+# model cache folder
+model_cache/
+
+# requirements files (used by Beam)
+requirements.txt
