@@ -1,0 +1,52 @@
+[tool.poetry]
+name = "data_pipeline"
+version = "0.1.0"
+description = ""
+authors = ["João Correia <joaodpscorreia@gmail.com>"]
+readme = "README.md"
+packages = [{include = "data_pipeline"}]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.12"
+python-dotenv = "^1.0.0"
+pydantic = ">=1.8,<2.0"
+unstructured = "^0.10.5"
+sentencepiece = "^0.1.99"
+qdrant-client = "^1.12.2,<1.13.0"
+transformers = "^4.33.1"
+torch = "2.0.1"
+pyyaml = "6.0.1"
+numpy = ">=1.24.1,<2.0"
+dagster = "1.7.16"
+dagster-webserver = "1.7.16"
+pandas = "^2.2.3"
+feedparser = "^6.0.11"
+requests = "^2.32.3"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.7.0"
+ruff = "^0.0.285"
+
+[[tool.poetry.source]]
+name = "PyPI"
+priority = "primary"
+
+[[tool.poetry.source]]
+name = "torch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+priority = "supplemental"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.isort]
+case-sensitive = true
+
+[tool.dagster]
+module_name = "data_pipeline.definitions"
+code_location_name = "data_pipeline"

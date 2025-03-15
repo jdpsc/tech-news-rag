@@ -1,0 +1,3 @@
+# Telegram configuration
+telemetry:
+  enabled: false
