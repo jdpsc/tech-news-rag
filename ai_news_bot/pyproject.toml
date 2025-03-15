@@ -1,0 +1,51 @@
+[tool.poetry]
+name = "ai_news_bot"
+version = "0.1.0"
+description = ""
+authors = ["João Correia <joaodpscorreia@gmail.com>"]
+readme = "README.md"
+packages = [{include = "ai_news_bot"}]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.11"
+langchain = "^0.0.354"
+gradio = "^3.48.0"
+qdrant-client = "^1.12.2,<1.13.0"
+comet-ml = "3.43.2"
+transformers = "^4.49.0"
+peft = "^0.14.0"
+python-dotenv = "^1.0.0"
+scipy = "^1.11.1"
+einops = "^0.6.1"
+fire = "^0.5.0"
+bitsandbytes = "^0.44.0"
+torch = "2.3.0"
+unstructured = "^0.10.5"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.7.0"
+ruff = "^0.0.285"
+pytest = "^8.3.3"
+
+[[tool.poetry.source]]
+name = "torch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+priority = "supplemental"
+
+
+[[tool.poetry.source]]
+name = "PyPI"
+priority = "primary"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.isort]
+case-sensitive = true
